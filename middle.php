@@ -1,14 +1,17 @@
 
 <?php
 
-	//testing
-	$user = "jkv5";
-	$pass = "pass123";
+	//temp testing
+	$user = "jkv5"; 		//temp -- waiting for the front end and back end code
+	$pass = "pass123";	//not njit credentials
 	$uuid = "0xAC021";
 	$njit_url = "https://cp4.njit.edu/cp/home/login";
 	$localdb_url = "http://web.njit.edu/~bkp4113/..";
 
 	//Authentication To NJIT
+	//WARNING: able to login on njit webpage with user's correct username
+	//and password. But running the code with correct njit authentication
+	//could disable user's njit account
 	$auth_njit = curl_init($njit_url);
 	curl_setopt_array($auth_njit, array(
 		CURLOPT_POST =>true,
